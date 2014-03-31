@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yelp.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @yelp.address %>
+</p>
+
+<p>
+  <strong>Descr:</strong>
+  <%= @yelp.descr %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @yelp.comment %>
+</p>
+
+<%= link_to 'Edit', edit_yelp_path(@yelp) %> |
+<%= link_to 'Back', yelps_path %>

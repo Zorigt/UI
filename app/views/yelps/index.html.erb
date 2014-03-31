@@ -1,0 +1,33 @@
+<h1>Listing yelps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Descr</th>
+      <th>Comment</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yelps.each do |yelp| %>
+      <tr>
+        <td><%= yelp.name %></td>
+        <td><%= yelp.address %></td>
+        <td><%= yelp.descr %></td>
+        <td><%= yelp.comment %></td>
+        <td><%= link_to 'Show', yelp %></td>
+        <td><%= link_to 'Edit', edit_yelp_path(yelp) %></td>
+        <td><%= link_to 'Destroy', yelp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yelp', new_yelp_path %>
